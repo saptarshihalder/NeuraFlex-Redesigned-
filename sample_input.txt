@@ -1,0 +1,1344 @@
+
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large language models
+    like GPT, but at a fraction of the cost and computational requirements.
+    The transformer architecture allows the model to capture patterns in text
+    and generate new content based on what it has learned. With enough training data and compute,
+    these models can become quite sophisticated. NeuraFlex is focused on being
+    accessible and educational, allowing users to understand how language models work
+    without requiring specialized hardware or massive datasets.
+    
+    NeuraFlex is a tiny language model implementation designed to run on standard laptops.
+    Despite its small size, it demonstrates the core principles behind large l

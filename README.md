@@ -1,113 +1,73 @@
-# NeuraFlex - Tiny LLM Implementation
+# NeuraFlex-Ouroboros
 
-**Version: 0.0.1**
+**Version 1.0.0**: a 52B-parameter looped Mixture-of-Experts language model architecture, built from scratch by Saptarshi Halder.
 
-NeuraFlex is a minimal language model implementation designed to run on standard laptops, demonstrating the core principles behind large language models at a fraction of the computational requirements.
+NeuraFlex started as a ~100K-parameter character-level transformer (preserved in [`legacy/v0.0.1`](legacy/v0.0.1)). v1 is a full redesign around one idea: **depth should be a runtime knob, not a fixed cost.**
 
-## Overview
+- **Looped core.** 12 unique layers. The 8-layer core repeats r times, giving 36 layers of compute at r=4 and 68 at r=8 with no new weights.
+- **Depth-Routed Experts.** Each core layer has 256 fine-grained experts plus a shared expert. The router sees the loop index, so each pass can call different experts, which turns a fixed parameter budget into a combinatorial set of virtual layers.
+- **Loop-LoRA.** Rank-64 adapters for each iteration let every pass specialise while sharing over 99% of its weights.
+- **Hybrid attention.** Gated DeltaNet (O(1) state) handles 3/4 of the core and Multi-head Latent Attention handles the rest, so looping doesn't blow up the KV cache.
+- **Adaptive thinking.** Tokens stop looping once their state converges. Skipped iterations get a cheap attention-only cache fill, so the cache stays consistent.
+- **Train small, grow big.** `expert_mitosis` turns a ~7B seed into the 52B model. The `split` mode preserves the function exactly.
+- **Modern training stack.** Muon + AdamW, WSD schedule, log-normal Poisson loop sampling with truncated BPTT, multi-token prediction, optional distillation from an open-weight teacher, and FSDP2.
 
-This project implements a small-scale language model (approximately 100K parameters) based on the transformer architecture. Despite its small size, NeuraFlex demonstrates the fundamental concepts behind modern LLMs like GPT, but designed to run on consumer hardware.
+The full design, the cost plan and the ablation plan are in **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
 
-## Features
+| Preset | Total | Active / token (r=4) | Use |
+|---|---|---|---|
+| `debug` | ~0.5M | — | CPU tests |
+| `3b` | 3.5B | 2.3B | ablations / proof of concept |
+| `50b` | 52.5B | 12.7B | target model |
 
-- **Lightweight**: ~100K parameters, runs on CPU
-- **Transformer-based**: Employs the same architecture principles as larger models
-- **Character-level**: Works with raw text instead of requiring specialized tokenization
-- **Educational**: Clear, documented code that shows how LLMs function
-- **Resource-efficient**: Runs on standard laptops without specialized hardware
-
-## Requirements
-
-- Python 3.6+
-- PyTorch (1.0+)
-
-```bash
-pip install torch
-```
-
-## Usage
-
-### Training the Model
-
-To train the model on the included sample text (or your own text):
+## Quick start
 
 ```bash
-python neuraflex.py
+pip install -r requirements.txt
+python -m pytest tests            # 8 tests: cache consistency, exact mitosis, truncated BPTT, ...
+python scripts/param_count.py 50b
+
+# CPU smoke test (byte-level)
+python train.py --preset debug --data legacy/v0.0.1/sample_input.txt --steps 300 --seq-len 128
+python generate.py --ckpt checkpoints/step_300.pt --prompt "Q: Who created you?" --loops 6
 ```
 
-The script will automatically:
-1. Create sample training data if none exists
-2. Initialize a NeuraFlex model with ~100K parameters
-3. Train for 10 epochs (configurable)
-4. Save checkpoints and a final model
-5. Generate a sample text output
-
-### Generating Text
-
-After training, you can generate text with the trained model:
+### Real training
 
 ```bash
-python generate_neuraflex.py --prompt "NeuraFlex can" --length 300
+torchrun --nnodes $N --nproc-per-node 8 train.py --preset 3b \
+  --tokenizer Qwen/Qwen3-8B --data HuggingFaceFW/fineweb-edu --data-config sample-10BT \
+  --seq-len 4096 --batch-size 2 --grad-accum 8 --lr 2e-3 --steps 100000 \
+  --teacher Qwen/Qwen3-8B --kd-weight 0.5
 ```
 
-### Web Interface
+### Grow a seed into the 52B model
 
-To use the ChatGPT-like interface:
-
-1. Install required dependencies:
-```bash
-pip install flask
+```python
+from neuraflex.upcycle import expert_mitosis
+big = expert_mitosis(seed_model, factor=8, mode="replicate")   # 32 -> 256 experts
 ```
 
-2. Start the web server:
-```bash
-python app.py
+## Layout
+
+```
+neuraflex/
+  config.py    presets (debug / 3b / 50b)
+  layers.py    RMSNorm, RoPE, SwiGLU, MLA, Gated DeltaNet
+  moe.py       Depth-Routed Experts
+  model.py     Ouroboros model, cache, adaptive exit, MTP, generate
+  muon.py      Muon + AdamW optimizer
+  upcycle.py   expert mitosis / deepen
+train.py       FSDP2 training, distillation, WSD schedule
+generate.py    sampling with adaptive loops
+tests/         unit tests
+legacy/v0.0.1  original NeuraFlex
 ```
 
-3. Open your browser to:
-```bash
-http://localhost:5000
-```
+## Status
 
-Features:
-- Real-time chat interface
-- Conversation history
-- Temperature control
-- Responsive design
-
-Options:
-- `--model_path`: Path to the trained model (default: neuraflex_v0.0.1_final.pth)
-- `--prompt`: Starting text for generation (default: "NeuraFlex is")
-- `--length`: Number of characters to generate (default: 200)
-- `--temperature`: Sampling temperature; higher values give more random results (default: 1.0)
-
-## How It Works
-
-NeuraFlex implements a miniature transformer-based language model:
-
-1. **Embedding Layer**: Converts characters to vector representations
-2. **Positional Encoding**: Adds positional information to the embeddings
-3. **Transformer Layers**: Processes input with self-attention and feed-forward networks
-4. **Output Layer**: Projects to character probability distribution
-
-During generation, the model:
-1. Takes an input sequence (prompt)
-2. Predicts the next character distribution
-3. Samples from this distribution to select the next character
-4. Adds this character to the input and repeats
-
-## Limitations
-
-As a tiny model with limited parameters and training data, NeuraFlex will produce basic text compared to commercial LLMs. It serves primarily as a demonstration and educational tool rather than a production-ready system.
-
-## Future Improvements
-
-- Implement better tokenization (BPE or WordPiece)
-- Add attention efficiency optimizations
-- Support for training on custom datasets
-- Parameter-efficient fine-tuning
-- Quantization support
+This is a tested reference implementation that has not yet been trained at scale, so no benchmark results are claimed. A 256-expert run still needs expert-parallel and grouped-GEMM kernels (torchtitan or Megatron). See §5 of the architecture doc.
 
 ## License
 
-MIT 
+MIT

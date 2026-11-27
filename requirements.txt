@@ -1,0 +1,6 @@
+torch>=2.6
+transformers>=4.45
+datasets>=3.0
+pytest
+# optional, CUDA only: fused Gated DeltaNet kernels
+# flash-linear-attention

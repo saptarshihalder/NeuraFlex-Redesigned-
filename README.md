@@ -1,6 +1,6 @@
 # NeuraFlex-Ouroboros
 
-**Version 1.0.0**: a 52B-parameter looped Mixture-of-Experts language model architecture, built from scratch by Saptarshi Halder.
+**Version 1.1.0**: a 52B-parameter looped Mixture-of-Experts language model architecture, plus a CPU-native variant that trains on a swarm of free machines. Built from scratch by Saptarshi Halder.
 
 NeuraFlex started as a ~100K-parameter character-level transformer (preserved in [`legacy/v0.0.1`](legacy/v0.0.1)). v1 is a full redesign around one idea: **depth should be a runtime knob, not a fixed cost.**
 
@@ -14,9 +14,16 @@ NeuraFlex started as a ~100K-parameter character-level transformer (preserved in
 
 The full design, the cost plan and the ablation plan are in **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
 
+### No GPU? Ouroboros Pocket + Hive
+
+Free CPUs have the opposite strengths of a GPU: few FLOPs, but plenty of RAM and cheap random access. So the CPU variant inverts the design. Capacity lives in huge sparse lookup tables (262k product-key micro-experts that see the loop index, plus hashed n-gram memory), and only ~15M dense parameters do arithmetic per token. Training runs on any number of unreliable free machines through **row-sparse asynchronous DiLoCo**, with a Hugging Face repo or a shared folder as the parameter server.
+
+On a 2-core CPU, the 577M-parameter `pocket` model trains at ~270 tok/s in ~5 GB RAM, about 9x faster than a same-size dense model, which wouldn't even fit in memory. Details, measurements, budgets and setup are in **[docs/CPU_HIVE.md](docs/CPU_HIVE.md)**.
+
 | Preset | Total | Active / token (r=4) | Use |
 |---|---|---|---|
-| `debug` | ~0.5M | — | CPU tests |
+| `debug` / `debug-pkm` | ~0.5M | — | CPU tests |
+| `pocket` | 577M (537M sparse) | ~15M per pass | free-CPU training, Hive swarm |
 | `3b` | 3.5B | 2.3B | ablations / proof of concept |
 | `50b` | 52.5B | 12.7B | target model |
 
@@ -24,7 +31,7 @@ The full design, the cost plan and the ablation plan are in **[docs/ARCHITECTURE
 
 ```bash
 pip install -r requirements.txt
-python -m pytest tests            # 8 tests: cache consistency, exact mitosis, truncated BPTT, ...
+python -m pytest tests            # 11 tests: cache consistency, exact mitosis, truncated BPTT, swarm merge, ...
 python scripts/param_count.py 50b
 
 # CPU smoke test (byte-level)
@@ -32,7 +39,17 @@ python train.py --preset debug --data legacy/v0.0.1/sample_input.txt --steps 300
 python generate.py --ckpt checkpoints/step_300.pt --prompt "Q: Who created you?" --loops 6
 ```
 
-### Real training
+### Free-CPU swarm (Hive)
+
+```bash
+python -m neuraflex.hive.coordinator init --transport hub:YOU/neuraflex-hive --preset pocket
+python -m neuraflex.hive.coordinator run  --transport hub:YOU/neuraflex-hive        # always-on box
+python -m neuraflex.hive.worker --transport hub:YOU/neuraflex-hive --worker-id kaggle-1 \
+  --tokenizer HuggingFaceTB/SmolLM2-135M --data HuggingFaceFW/fineweb-edu --data-config sample-10BT
+python scripts/cpu_bench.py --preset pocket --compare-dense                          # measure your box
+```
+
+### Real training (GPU)
 
 ```bash
 torchrun --nnodes $N --nproc-per-node 8 train.py --preset 3b \
@@ -52,14 +69,18 @@ big = expert_mitosis(seed_model, factor=8, mode="replicate")   # 32 -> 256 exper
 
 ```
 neuraflex/
-  config.py    presets (debug / 3b / 50b)
+  config.py    presets (debug / pocket / 3b / 50b)
   layers.py    RMSNorm, RoPE, SwiGLU, MLA, Gated DeltaNet
   moe.py       Depth-Routed Experts
+  sparse.py    product-key micro-experts, hashed n-gram memory (CPU design point)
+  data.py      sharded token streams
+  hive/        swarm training: transport, row-sparse DiLoCo protocol, worker, coordinator
   model.py     Ouroboros model, cache, adaptive exit, MTP, generate
-  muon.py      Muon + AdamW optimizer
+  muon.py      Muon + AdamW, row-wise sparse Adam for huge tables
   upcycle.py   expert mitosis / deepen
 train.py       FSDP2 training, distillation, WSD schedule
 generate.py    sampling with adaptive loops
+scripts/       param_count.py, cpu_bench.py
 tests/         unit tests
 legacy/v0.0.1  original NeuraFlex
 ```

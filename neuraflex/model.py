@@ -16,10 +16,12 @@ from dataclasses import dataclass
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.utils.checkpoint import checkpoint
 
 from .config import NeuraFlexConfig
 from .layers import MLA, GatedDeltaNet, RMSNorm, Rotary, SwiGLU
 from .moe import DepthRoutedMoE, loop_features
+from .sparse import HashNgramEmbedding, ProductKeyExperts
 
 
 class LoopLoRA(nn.Module):
@@ -38,13 +40,18 @@ class LoopLoRA(nn.Module):
 
 
 class Block(nn.Module):
-    def __init__(self, cfg: NeuraFlexConfig, kind: str, moe: bool, sandwich: bool):
+    def __init__(self, cfg: NeuraFlexConfig, kind: str, ffn: str, sandwich: bool):
         super().__init__()
-        self.kind, self.is_moe, self.sandwich = kind, moe, sandwich
+        self.kind, self.ffn_kind, self.sandwich = kind, ffn, sandwich
         self.attn_norm = RMSNorm(cfg.d_model, cfg.norm_eps)
         self.attn = MLA(cfg) if kind == "A" else GatedDeltaNet(cfg)
         self.ffn_norm = RMSNorm(cfg.d_model, cfg.norm_eps)
-        self.ffn = DepthRoutedMoE(cfg) if moe else SwiGLU(cfg.d_model, cfg.dense_ffn_dim)
+        if ffn == "moe":
+            self.ffn = DepthRoutedMoE(cfg)
+        elif ffn == "pkm":
+            self.ffn = ProductKeyExperts(cfg)
+        else:
+            self.ffn = SwiGLU(cfg.d_model, cfg.dense_ffn_dim)
         if sandwich:
             self.attn_post = RMSNorm(cfg.d_model, cfg.norm_eps)
             self.ffn_post = RMSNorm(cfg.d_model, cfg.norm_eps)
@@ -58,7 +65,7 @@ class Block(nn.Module):
             a = self.attn_post(a)
         x = x + a
         hn = self.ffn_norm(x)
-        if self.is_moe:
+        if self.ffn_kind in ("moe", "pkm"):
             f, aux = self.ffn(hn, loop_feat)
         else:
             f, aux = self.ffn(hn), None
@@ -77,7 +84,7 @@ class MTPModule(nn.Module):
         self.norm_h = RMSNorm(cfg.d_model, cfg.norm_eps)
         self.norm_e = RMSNorm(cfg.d_model, cfg.norm_eps)
         self.proj = nn.Linear(2 * cfg.d_model, cfg.d_model, bias=False)
-        self.block = Block(cfg, "A", moe=False, sandwich=False)
+        self.block = Block(cfg, "A", "dense", sandwich=False)
 
     def forward(self, h, emb, rope):
         x = self.proj(torch.cat([self.norm_h(h), self.norm_e(emb)], dim=-1))
@@ -100,19 +107,27 @@ class NeuraFlex(nn.Module):
         super().__init__()
         self.cfg = cfg
         d = cfg.d_model
-        self.embed = nn.Embedding(cfg.vocab_size, d)
+        self.embed = nn.Embedding(cfg.vocab_size, d, sparse=cfg.sparse_embed)
+        self.ngram = HashNgramEmbedding(cfg) if cfg.ngram_orders else None
         self.rotary = Rotary(cfg.qk_rope_head_dim, cfg.rope_theta)
-        self.prelude = nn.ModuleList(Block(cfg, "A", False, False) for _ in range(cfg.n_prelude))
-        self.core = nn.ModuleList(Block(cfg, cfg.core_kind(j), True, True) for j in range(cfg.n_core))
+        self.prelude = nn.ModuleList(Block(cfg, "A", "dense", False) for _ in range(cfg.n_prelude))
+        self.core = nn.ModuleList(Block(cfg, cfg.core_kind(j), cfg.core_ffn, True) for j in range(cfg.n_core))
         self.loop_lora = nn.ModuleList(LoopLoRA(cfg) for _ in range(cfg.n_core))
         self.state_norm = RMSNorm(d, cfg.norm_eps)
         self.echo_norm = RMSNorm(d, cfg.norm_eps)
         self.adapter = nn.Linear(2 * d, d, bias=False)
-        self.coda = nn.ModuleList(Block(cfg, "A", False, False) for _ in range(cfg.n_coda))
+        self.coda = nn.ModuleList(Block(cfg, "A", "dense", False) for _ in range(cfg.n_coda))
         self.norm = RMSNorm(d, cfg.norm_eps)
-        self.lm_head = nn.Linear(d, cfg.vocab_size, bias=False)
-        if cfg.tie_embeddings:
-            self.lm_head.weight = self.embed.weight
+        if cfg.head == "adaptive":
+            assert not cfg.tie_embeddings
+            self.lm_head = None
+            self.adaptive = nn.AdaptiveLogSoftmaxWithLoss(d, cfg.vocab_size, list(cfg.adaptive_cutoffs),
+                                                          div_value=cfg.adaptive_div, head_bias=False)
+        else:
+            self.lm_head = nn.Linear(d, cfg.vocab_size, bias=False)
+            if cfg.tie_embeddings:
+                assert not cfg.sparse_embed
+                self.lm_head.weight = self.embed.weight
         self.mtp = nn.ModuleList(MTPModule(cfg) for _ in range(cfg.n_mtp))
         self.reset_parameters()
 
@@ -131,8 +146,9 @@ class NeuraFlex(nn.Module):
         inv = 1.0 / (cfg.rope_theta ** (torch.arange(0, dim, 2, dtype=torch.float32) / dim))
         self.rotary.inv_freq.copy_(inv.to(self.rotary.inv_freq.device))
         for blk in self.core:
-            blk.ffn.expert_bias.zero_()
-            blk.ffn.load.zero_()
+            if blk.ffn_kind == "moe":
+                blk.ffn.expert_bias.zero_()
+                blk.ffn.load.zero_()
         for m in self.modules():
             if isinstance(m, GatedDeltaNet):
                 with torch.no_grad():
@@ -151,21 +167,63 @@ class NeuraFlex(nn.Module):
     @torch.no_grad()
     def update_router_biases(self):
         for blk in self.core:
-            blk.ffn.update_bias(self.cfg.router_bias_update_rate)
+            if blk.ffn_kind == "moe":
+                blk.ffn.update_bias(self.cfg.router_bias_update_rate)
 
     def param_counts(self) -> dict:
+        """total / embedding / routed-expert / sparse-table counts and an estimate of the
+        parameters actually used per token for one pass through the core."""
+        from .sparse import split_sparse
         cfg = self.cfg
         total = sum(p.numel() for p in self.parameters())
-        emb = self.embed.weight.numel() + (0 if cfg.tie_embeddings else self.lm_head.weight.numel())
-        routed = sum(b.ffn.w1.numel() + b.ffn.w2.numel() + b.ffn.w3.numel() for b in self.core)
+        emb = self.embed.weight.numel() + (0 if cfg.tie_embeddings or self.lm_head is None
+                                           else self.lm_head.weight.numel())
+        routed = sum(b.ffn.w1.numel() + b.ffn.w2.numel() + b.ffn.w3.numel()
+                     for b in self.core if b.ffn_kind == "moe")
+        sparse = sum(p.numel() for _, p in split_sparse(self)[1] if p is not self.embed.weight)
         mtp = sum(p.numel() for p in self.mtp.parameters())
-        active = total - emb - mtp - routed + routed * cfg.top_k / cfg.n_experts
-        return {"total": total, "embedding": emb, "routed_experts": routed, "mtp": mtp,
-                "active_non_embedding_per_pass": int(active)}
+        active = total - emb - mtp - routed - sparse
+        if cfg.core_ffn == "moe":
+            active += routed * cfg.top_k / cfg.n_experts
+        if cfg.core_ffn == "pkm":
+            active += cfg.n_core * cfg.pkm_heads * cfg.pkm_topk * 2 * cfg.d_model
+        if self.ngram is not None:
+            active += len(cfg.ngram_orders) * cfg.ngram_dim
+        return {"total": total, "embedding": emb, "routed_experts": routed, "sparse_tables": sparse,
+                "mtp": mtp, "active_non_embedding_per_pass": int(active)}
 
     # --------------------------------------------------------------- forward
+    def logits(self, h):
+        hn = self.norm(h)
+        if self.lm_head is None:  # adaptive softmax: log-probs work as logits for sampling
+            with torch.autocast(hn.device.type, enabled=False):
+                return self.adaptive.log_prob(hn.reshape(-1, hn.shape[-1]).float()).view(*hn.shape[:-1], -1)
+        return self.lm_head(hn)
+
+    def _ce(self, h, labels, return_logits: bool):
+        """Cross-entropy. With return_logits=False the vocab projection is done in
+        checkpointed chunks, so full (tokens x vocab) logits never exist in memory."""
+        V = self.cfg.vocab_size
+        if self.lm_head is None:
+            hf, y = self.norm(h).reshape(-1, h.shape[-1]), labels.reshape(-1)
+            keep = y != -100
+            with torch.autocast(hf.device.type, enabled=False):
+                loss = self.adaptive(hf[keep].float(), y[keep]).loss
+            return loss, (self.logits(h) if return_logits else None)
+        if return_logits:
+            logits = self.lm_head(self.norm(h))
+            return F.cross_entropy(logits.float().view(-1, V), labels.reshape(-1), ignore_index=-100), logits
+        hf, y = h.reshape(-1, h.shape[-1]), labels.reshape(-1)
+        total = hf.new_zeros((), dtype=torch.float32)
+        for s in range(0, hf.shape[0], 1024):
+            total = total + checkpoint(self._ce_chunk, hf[s:s + 1024], y[s:s + 1024], use_reentrant=False)
+        return total / (y != -100).sum().clamp_min(1), None
+
+    def _ce_chunk(self, h, y):
+        return F.cross_entropy(self.lm_head(self.norm(h)).float(), y, ignore_index=-100, reduction="sum")
+
     def forward(self, input_ids, labels=None, n_loops: int | None = None, cache: dict | None = None,
-                start_pos: int = 0, exit_threshold: float | None = None) -> Output:
+                start_pos: int = 0, exit_threshold: float | None = None, return_logits: bool = True) -> Output:
         cfg = self.cfg
         B, T = input_ids.shape
         dev = input_ids.device
@@ -174,6 +232,12 @@ class NeuraFlex(nn.Module):
         slot = (lambda k: None) if cache is None else (lambda k: cache.setdefault(k, {}))
 
         x = self.embed(input_ids)
+        if self.ngram is not None:
+            ctx = cache.get("ngram_ctx") if cache is not None else None
+            xn, new_ctx = self.ngram(input_ids, ctx)
+            x = x + xn
+            if cache is not None:
+                cache["ngram_ctx"] = new_ctx
         for j, blk in enumerate(self.prelude):
             x, _ = blk(x, rope, slot(("pre", j)))
 
@@ -194,7 +258,8 @@ class NeuraFlex(nn.Module):
                 lf = loop_features(i, cfg.loop_emb_dim, dev)
                 for j, blk in enumerate(self.core):
                     s, a = blk(s, rope, slot(("core", j, i)), lf, self.loop_lora[j], i)
-                    aux = aux + a
+                    if a is not None:
+                        aux = aux + a
             used = i + 1
             if exit_threshold > 0 and i >= 1:
                 delta = (s - s_prev).float().norm(dim=-1) / s.float().norm(dim=-1).clamp_min(1e-6)
@@ -208,27 +273,24 @@ class NeuraFlex(nn.Module):
         x = s
         for j, blk in enumerate(self.coda):
             x, _ = blk(x, rope, slot(("coda", j)))
-        logits = self.lm_head(self.norm(x))
+        if labels is None:
+            return Output(logits=self.logits(x), loops=used, hidden=x)
+        ce, logits = self._ce(x, labels, return_logits)
         out = Output(logits=logits, loops=used, hidden=x)
-
-        if labels is not None:
-            V = cfg.vocab_size
-            ce = F.cross_entropy(logits.float().view(-1, V), labels.reshape(-1), ignore_index=-100)
-            mtp_loss = x.new_zeros((), dtype=torch.float32)
-            h = x
-            n = 0
-            for k, mod in enumerate(self.mtp, start=1):
-                if T - k <= 0:
-                    break
-                h = mod(h[:, :-1], self.embed(input_ids[:, k:]), self.rotary(pos[: T - k]))
-                lg = self.lm_head(self.norm(h))
-                mtp_loss = mtp_loss + F.cross_entropy(lg.float().view(-1, V), labels[:, k:].reshape(-1), ignore_index=-100)
-                n += 1
-            if n:
-                mtp_loss = mtp_loss / n
-            aux = aux / max(1, used * cfg.n_core)
-            out.loss = ce + cfg.mtp_weight * mtp_loss + cfg.seq_aux_loss_weight * aux
-            out.ce, out.mtp, out.aux = ce, mtp_loss, aux
+        mtp_loss = x.new_zeros((), dtype=torch.float32)
+        h = x
+        n = 0
+        for k, mod in enumerate(self.mtp, start=1):
+            if T - k <= 0:
+                break
+            h = mod(h[:, :-1], self.embed(input_ids[:, k:]), self.rotary(pos[: T - k]))
+            mtp_loss = mtp_loss + self._ce(h, labels[:, k:], return_logits=False)[0]
+            n += 1
+        if n:
+            mtp_loss = mtp_loss / n
+        aux = aux / max(1, used * cfg.n_core)
+        out.loss = ce + cfg.mtp_weight * mtp_loss + cfg.seq_aux_loss_weight * aux
+        out.ce, out.mtp, out.aux = ce, mtp_loss, aux
         return out
 
     # -------------------------------------------------------------- generate

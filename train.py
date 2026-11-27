@@ -10,6 +10,10 @@ Multi-node (FSDP2):
 
 Distil from an open-weight teacher that shares the tokenizer:
     ... --teacher Qwen/Qwen3-32B --kd-weight 0.5
+
+CPU (single machine; for many machines use the Hive swarm, see docs/CPU_HIVE.md):
+    python train.py --preset pocket --tokenizer HuggingFaceTB/SmolLM2-135M \
+        --data HuggingFaceFW/fineweb-edu --data-config sample-10BT --batch-size 1 --grad-accum 8 --seq-len 512
 """
 from __future__ import annotations
 
@@ -24,42 +28,9 @@ import torch.distributed as dist
 import torch.nn.functional as F
 
 from neuraflex import NeuraFlex, preset
-from neuraflex.muon import MuonAdamW
-
-
-# ----------------------------------------------------------------------------- data
-def byte_stream(path):
-    data = open(path, "rb").read()
-    while True:
-        yield from data
-
-
-def token_stream(args, rank, world):
-    if args.tokenizer is None:  # byte-level fallback (vocab 256) for smoke tests
-        yield from byte_stream(args.data)
-        return
-    from transformers import AutoTokenizer
-    tok = AutoTokenizer.from_pretrained(args.tokenizer)
-    eos = tok.eos_token_id
-    if os.path.exists(args.data):
-        texts = (line for line in open(args.data, encoding="utf-8"))
-    else:
-        from datasets import load_dataset
-        ds = load_dataset(args.data, args.data_config, split="train", streaming=True)
-        ds = ds.shard(num_shards=world, index=rank) if world > 1 else ds
-        texts = (ex[args.text_field] for ex in ds)
-    for t in texts:
-        yield from tok(t, add_special_tokens=False)["input_ids"]
-        yield eos
-
-
-def batches(args, rank, world, device):
-    it = token_stream(args, rank, world)
-    n = args.batch_size * (args.seq_len + 1)
-    while True:
-        buf = torch.tensor([next(it) for _ in range(n)], dtype=torch.long).view(args.batch_size, args.seq_len + 1)
-        buf = buf.to(device, non_blocking=True)
-        yield buf[:, :-1], buf[:, 1:]
+from neuraflex.data import batches, token_stream
+from neuraflex.muon import OptimizerGroup
+from neuraflex.sparse import split_sparse
 
 
 # ------------------------------------------------------------------------ schedule
@@ -102,6 +73,7 @@ def main():
     ap.add_argument("--log-every", type=int, default=10)
     ap.add_argument("--compile", action="store_true")
     ap.add_argument("--seed", type=int, default=1234)
+    ap.add_argument("--threads", type=int, default=None)
     args = ap.parse_args()
 
     distributed = int(os.environ.get("WORLD_SIZE", "1")) > 1
@@ -112,6 +84,8 @@ def main():
     else:
         rank, world = 0, 1
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if args.threads:
+        torch.set_num_threads(args.threads)
     master = rank == 0
     torch.manual_seed(args.seed + rank)
 
@@ -128,6 +102,7 @@ def main():
         model.load_state_dict(sd.get("model", sd), assign=distributed)
 
     if distributed:
+        assert not split_sparse(model)[1], "sparse-table presets are CPU/Hive only (FSDP needs dense params)"
         from torch.distributed.fsdp import MixedPrecisionPolicy, fully_shard
         mp = MixedPrecisionPolicy(param_dtype=torch.bfloat16, reduce_dtype=torch.float32)
         for blk in [*model.prelude, *model.core, *model.coda, *model.mtp]:
@@ -140,10 +115,7 @@ def main():
         counts = model.param_counts()
         print(json.dumps({k: f"{v / 1e9:.3f}B" for k, v in counts.items()}, indent=1))
 
-    if args.optimizer == "muon":
-        opt = MuonAdamW(MuonAdamW.split_params(model), lr=args.lr, weight_decay=args.weight_decay)
-    else:
-        opt = torch.optim.AdamW(model.parameters(), lr=args.lr, betas=(0.9, 0.95), weight_decay=args.weight_decay)
+    opt = OptimizerGroup(model, args.lr, args.weight_decay, args.optimizer)
 
     teacher = None
     if args.teacher:
@@ -151,9 +123,12 @@ def main():
         teacher = AutoModelForCausalLM.from_pretrained(args.teacher, torch_dtype=torch.bfloat16).to(device).eval()
 
     fwd = torch.compile(model) if args.compile else model
-    data = batches(args, rank, world, device)
+    data = batches(token_stream(args.data, args.tokenizer, args.data_config, args.text_field, rank, world),
+                   args.batch_size, args.seq_len, device)
     loop_gen = torch.Generator().manual_seed(args.seed)  # identical loop counts on every rank
-    autocast = torch.autocast(device.type, dtype=torch.bfloat16, enabled=device.type == "cuda" and not distributed)
+    amx = device.type == "cpu" and "amx_bf16" in open("/proc/cpuinfo").read() if os.path.exists("/proc/cpuinfo") else False
+    autocast = torch.autocast(device.type, dtype=torch.bfloat16,
+                              enabled=(device.type == "cuda" and not distributed) or amx)
     os.makedirs(args.out, exist_ok=True)
     if master:
         cfg.to_json(os.path.join(args.out, "config.json"))
@@ -162,14 +137,13 @@ def main():
     t0 = time.time()
     for step in range(args.steps):
         lr = wsd_lr(step, args)
-        for g in opt.param_groups:
-            g["lr"] = lr
+        opt.set_lr(lr)
         n_loops = model.sample_loops(loop_gen)
         logs = {"loss": 0.0, "ce": 0.0, "mtp": 0.0, "kd": 0.0}
         for _ in range(args.grad_accum):
             x, y = next(data)
             with autocast:
-                out = fwd(x, labels=y, n_loops=n_loops)
+                out = fwd(x, labels=y, n_loops=n_loops, return_logits=teacher is not None)
                 loss = out.loss
                 if teacher is not None:
                     with torch.no_grad():
@@ -185,9 +159,9 @@ def main():
             logs["loss"] += loss.item() / args.grad_accum
             logs["ce"] += out.ce.item() / args.grad_accum
             logs["mtp"] += out.mtp.item() / args.grad_accum
-        gnorm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        gnorm = opt.clip(1.0)
         opt.step()
-        opt.zero_grad(set_to_none=True)
+        opt.zero_grad()
         model.update_router_biases()
 
         if master and step % args.log_every == 0:

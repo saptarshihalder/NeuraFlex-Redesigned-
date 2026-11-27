@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import json
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 
 
 @dataclass
@@ -47,6 +47,28 @@ class NeuraFlexConfig:
     router_bias_update_rate: float = 1e-3  # aux-loss-free balancing step
     seq_aux_loss_weight: float = 1e-4
 
+    # ---- core FFN type ------------------------------------------------------
+    # "moe"   : Depth-Routed Experts (GPU design point: dense compute, scarce memory)
+    # "pkm"   : Depth-Routed Product-Key Micro-Experts (CPU design point: huge sparse
+    #           tables in RAM, tiny compute, sparse gradients)
+    # "dense" : plain SwiGLU (baseline)
+    core_ffn: str = "moe"
+    pkm_heads: int = 4
+    pkm_n_keys: int = 256           # n_keys**2 single-neuron experts per core layer
+    pkm_topk: int = 8               # experts per head per token
+    pkm_key_dim: int = 128
+
+    # ---- vocabulary head / embedding ------------------------------------------
+    head: str = "full"              # "full" | "adaptive" (Grave et al. 2017: ~10x cheaper on CPU)
+    adaptive_cutoffs: tuple = (2048, 8192)
+    adaptive_div: float = 4.0
+    sparse_embed: bool = False      # token embedding as a sparse table (row-wise updates)
+
+    # ---- hashed n-gram input memory (0 orders = off) --------------------------
+    ngram_orders: tuple = ()
+    ngram_table_size: int = 1 << 20
+    ngram_dim: int = 128
+
     # ---- looping ------------------------------------------------------------
     max_loops: int = 16             # hard cap at train time
     mean_loops_train: float = 4.0   # mean of the log-normal Poisson loop sampler
@@ -80,7 +102,15 @@ class NeuraFlexConfig:
     @classmethod
     def from_json(cls, path: str) -> "NeuraFlexConfig":
         with open(path) as f:
-            return cls(**json.load(f))
+            return cls.from_dict(json.load(f))
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "NeuraFlexConfig":
+        d = dict(d)
+        for k in ("ngram_orders", "adaptive_cutoffs"):
+            if k in d:
+                d[k] = tuple(d[k])
+        return cls(**d)
 
 
 def preset(name: str) -> NeuraFlexConfig:
@@ -95,6 +125,24 @@ def preset(name: str) -> NeuraFlexConfig:
             gdn_heads=16, gdn_head_dim=128, dense_ffn_dim=5632,
             n_experts=64, top_k=6, expert_dim=768,
         )
+    if name in ("pocket", "hive"):
+        # CPU-native preset: ~0.6B parameters, most of them in sparse lookup tables;
+        # ~30M dense parameters do the actual arithmetic on each token.
+        return NeuraFlexConfig(
+            vocab_size=49_152, d_model=512, n_heads=8, q_lora_rank=256, kv_lora_rank=128,
+            qk_nope_head_dim=48, qk_rope_head_dim=16, v_head_dim=64,
+            head="adaptive", adaptive_cutoffs=(2048, 8192), sparse_embed=True, n_mtp=0,
+            n_prelude=1, n_core=4, n_coda=1, core_attn_pattern="A", dense_ffn_dim=1408,
+            core_ffn="pkm", pkm_heads=4, pkm_n_keys=256, pkm_topk=8, pkm_key_dim=128,
+            ngram_orders=(2, 3), ngram_table_size=1 << 20, ngram_dim=128,
+            loop_emb_dim=32, max_loops=8, mean_loops_train=2.5, bptt_loops=2,
+            loop_lora_rank=16, n_loop_adapters=8, infer_loops=4,
+            max_seq_len=2048, rope_theta=10_000.0, init_std=0.02,
+        )
+    if name == "debug-pkm":
+        return replace(preset("debug"), core_ffn="pkm", pkm_heads=2, pkm_n_keys=16, pkm_topk=4,
+                       pkm_key_dim=16, ngram_orders=(2, 3), ngram_table_size=4096, ngram_dim=16,
+                       head="adaptive", adaptive_cutoffs=(32, 96), sparse_embed=True)
     if name == "debug":
         return NeuraFlexConfig(
             vocab_size=256, d_model=64, n_heads=4, q_lora_rank=32, kv_lora_rank=16,

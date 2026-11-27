@@ -3,3 +3,4 @@ __pycache__/
 checkpoints/
 *.pt
 .pytest_cache/
+.hive/
